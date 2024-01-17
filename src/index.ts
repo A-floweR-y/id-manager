@@ -110,9 +110,9 @@ class IdManage {
     return this.storage.find((item) => item.name === menuName && item.parent === parentId);
   }
 
-  // 因为菜单的数据存储时扁平化的，并不利于查看，show 方法会把扁平化的菜单转化成树状结构的数据，方便查看
+  // 因为菜单的数据存储时扁平化的，并不利于查看，tree 方法会把扁平化的菜单转化成树状结构的数据，方便查看
   // 失活的菜单不会出现在返回结果中
-  show() {
+  tree() {
     const result = ({} as MenuTree);
     // 获取一级菜单列表
     const topList = this.storage.filter((item) => item.parent === null && item.isActive);

@@ -71,7 +71,7 @@ test(
     idManage.create(10, '新增菜单');
     idManage.create(10, '删除菜单');
     idManage.create(1011, '删除菜单审核');
-    expect(idManage.show()).toStrictEqual({
+    expect(idManage.tree()).toStrictEqual({
       10: {
         name: '菜单管理',
         children: {
